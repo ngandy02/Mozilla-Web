@@ -1,0 +1,137 @@
+html {
+    font-size: 19px; /* px means "pixels": the base font size is now 10 pixels high */
+    font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google Fonts */
+    background-color: #00539f;
+}
+
+body {
+    width: 600px; /* forces the body to always be 600 pixels wide and assumes that the images we use are smaller than 600px */
+    margin: 0 auto; /* when you set 2 values on a property like "margin" or "padding", 
+    the first value affects the element's top and bottom side (setting it to 0 in this case);
+    the second value affects the left and right side (here auto is a special value that divides the available horizontal space evenly between left and right) */
+    /* for margin you can also use 1, 2, 3, or 4 values instead with the order as: top, right, bottom, left*/
+    background-color: #ff9500; /* sets element's background color */
+    padding: 0 20px 20px 20px; /* Sets four values for padding. Goal is to put some space around the content. 
+    Here there is no padding on the top of the body, 20 pixels on the right, bottom, and left 
+    The order is set as: top, right, bottom, left */
+    border: 5px solid black; /* this sets the values for the width, style,and color of the border
+    In this case it is 5 pixels wide, with a solid black border, on all sides of the body */
+  }
+  
+/* 
+CSS Selectors:
+    1) Element Selector:
+        - Selects HTML elements based on the element name
+        - Example: Here, all <p> elements on the page will be center-aligned, with a red text color
+            p {
+                text-align: center;
+                color: red;
+            }
+    2) Id Selector:
+        - Selects HTML elements based on the id attribute of the HTML element
+        - Id of an element is unique within a page, 
+        so the id selector is used to select ONE unique element!
+        - To select an element with a specific ID, write a hash (#) character, followed by the id
+        - Example: Here, the element with id = "para1" will be selected
+            #para1 {
+                text-align: center;
+                color: red;
+            }
+    3) Class Selector:
+        - Selects HTML elements with a specific class attribute
+        - To select elements wtih a specific class, write a period (.) character, followed by the class name
+        - Example 1: Here, the elemwnt with class="center" will be selected
+            .center {
+                text-align: center;
+                color: red;
+            }
+        - Example 2: Here, only <p> elements wtih class="center" will be selected
+            p.center {
+                text-align: center;
+                color: red;
+            }
+        - Example 3: Here, only <p> elements with class="center" or class="large" will be selected
+*/
+
+
+
+/* CSS layout is mostly based on the box model. 
+Each box taking up space on your page has properties like:
+    - Padding: the space around the content
+    - Border: the solid line that is just outside the padding
+    - Margin: the space around the outside of the border 
+
+In this section we also use:
+    - width (of an element)
+    - background-color (color behind an element's content and padding)
+    - color (color of an element's content (usually text))
+    - text-shadow (sets a drop shadow on the text inside an element)
+    - display (sets the display mode of an element)
+*/
+
+img {
+    display: block; /* giviing the img element block-level behavior */
+    margin: 0 auto; /* setting the right and left spaces or margins equal to each other */
+}
+/*
+<body> is a "block" element, meaning that it takes up space on the page.
+The margin applied to a block element will be respected by other elements on the page
+HOWEVER, <img> are "inline" elements, so for the auto margin trick to work on this image,
+we must give the image element block-level behavior using "display: block; */
+
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0; /* to get rid of the huge gap above the heading/body becasue browsers apply a default styling to the h1 element which causes the extra space there */
+    padding: 20px 0; /* set the the heading's top and bottom padding to 20 pixels to allow the body to be centered at the top and bottom within the border */
+    color: #00539f;
+    text-shadow: 3px 3px 1px black; 
+    /* applies a shadow to the text content of the element.
+    Its four values are:
+        1) horizontal offest of the shadow from the text
+        2) veritcal offset of the shadow from the text 
+        3) blur radius of the shadow. Larger value produces a more fuzzy-looking shadow
+        4) sets the base color of the shadow
+    */   
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+
+/*p{
+    color: blue;
+    width: 500px;
+    border: 1px solid black;
+}
+/*
+
+/* 
+-"p" is the selector (selector: the HTML element name to be styled
+-"color" is the property
+-"blue" is the property value 
+-"color: blue;" is the declaration
+-whole thing above is called a "ruleset"
+-apart from the selector, each ruleset must be wrapped in curle braces ( {} )
+-within each declaration, you MUST use a colon (:) to separate the property from its value or values
+-within each ruleset, you MUST use a semicolon (;) to separate each declaration from the next one
+*/
+
+/* you can select multiple element and apply a single ruleset to all of them at once
+example:
+    p,
+    li,
+    h1 {
+        color: red;
+    }
+*/
+
+
+
+
+

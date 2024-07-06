@@ -1,0 +1,173 @@
+<!doctype html>
+<!-- Doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML-->
+<html lang="en-US">
+<!-- The <html> element wraps all the content on the entire page and is sometimes known as the root element -->
+<!-- The <html element also includes the lang attribute setting the primary language of the document-->
+  <head> <!-- NOT VISIBLE-->
+  <!-- The <head> acts as a container for all the stuff you want to include on the HTML page that is NOT the content you are showing to the viewers 
+        for example: page description, CSS to style content, and character set declarations -->
+    <link href="styles/style.css" rel="stylesheet" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet" />
+
+    
+    <meta charset="utf-8" />
+    <!-- This void 'meta' element sets the character set your document should use to UTF-8 which includes most characters from the majority of written languagees-->
+    <meta name="viewport" content="width=device-width" />
+    <!-- This void viewport element ensures the page renders at the width of viewport, preventing mobile browsers from rendering pages wider than the viewport and then shrinking them down -->
+    <title>My test page</title>
+    <!-- the <title> element sets the title of your page -->
+  </head>
+  <body> <!-- VISIBLE-->
+    <h1>Mozilla Welcomes You</h1>
+    <!-- the <body> element contains all the content that you WANT to show to web users when they visit your page-->
+    <img src="images/firefox.png" alt="Firefox logo: flaming fox wrapping the world" /> 
+    <!-- The void <img> element embeds an image into our page
+        src attribute contains the path to our image file; a required attribute that specifies the location of the image
+        alt attribute specifies descriptive text for users who can not see the image(could be bc of wrong filepath or visually impaired individuals)-->
+    <p> At Mozilla, we're a global community of</p>
+    <ul>
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li> builders</li>
+    </ul> 
+    <p>working together...</p>
+    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">
+      Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+    <button>Change user</button>
+      <script src="scripts/main.js"></script> <!--applies the JavaScript to the page, so it can have an effect on the HTML -->
+
+  </body>
+</html>
+
+<!-- ELEMENTS-->
+<!-- Is comprimised of the opening tag, closing tag, and the content inside-->
+
+<!-- ATTRIBUTES-->
+<!-- Contains extra information about the element that you don't want to appear in the acutal content 
+     <p class="editor-note">My cat is very grumpy</p>
+     The "class" is the attribute name:
+          - Allows you to give the element a non-unique identifier that can be used to target it 
+            (and any other elements with the same "class" value) with style information and other things
+          - Some attributes have no values, such as "required"
+     The "editor-note" is the attribute value  
+-->
+
+
+<!-- HEADINGS-->
+<!--
+  -6 Heading levels
+  -Commonly only use 3 to 4 levels at most
+  4 Heading Levels:
+  <h1>My main title</h1>
+  <h2>My top level heading</h2>
+  <h3>My subheading</h3>
+  <h4>My sub-subheading</h4>
+-->
+
+
+<!-- PARAGRAPHS-->
+<!-- <p>This is a single paragraph</p>
+-->
+
+
+<!-- LISTS-->
+<!-- Unordered lists: lists where the order of the items DOES NOT matter, such as shopping lists 
+      wrapped in a <ul> element
+-->
+<!-- Ordered lists: lists where the order of the items DOES matter, such as a recipe
+      wrapped in a <ol> element 
+-->
+<!-- Each item inside the lists is put inside an <li> (list item) element -->
+
+
+<!-- TURNING FROM PARAGRAPH FRAGMENT INTO A LIST-->
+<!-- PARAGARPH:
+<p>
+  At Mozilla, we're a global community of technologists, thinkers, and builders
+  working together…
+</p>
+-->
+
+<!-- LIST:
+  <p>At Mozilla, we're a global community of</p>
+
+<ul>
+  <li>technologists</li>
+  <li>thinkers</li>
+  <li>builders</li>
+</ul>
+
+<p>working together…</p>
+-->
+
+
+<!-- LINKS-->
+<!-- Links establishes a web
+    To add a link we use the simple element <a> 'a' being short for "anchor"
+    To make text within your paragraph into a link:
+      1) Choose some text
+      2) Wrap the text in an <a> element 
+      3) Give the <a> element an 'href' attribute 
+      4) Fill in the value of the attribute with the web address that you want the link to point to
+
+-->
+
+<!-- Introduction to HTML-->
+<!-- <img> element -->
+<!--
+The <img> element can take a number of attributes, including:
+- src
+- alt
+- width : specifies the width of the image with unit being pixels 
+- height : specifies the height of the image with the unit being pixels 
+-->
+
+<!-- Boolean attributes-->
+<!-- 
+  - Are attributes sometimes written without values
+  - Can only have one value, which is generally the same as the attribute name
+  - For example, the "disabled" attribute:
+      - <input type="text" disabled="disabled" />
+      in this 'input' element, the text box or input box is disabled, 
+      meaning the user can't make entries and the element/textbox is grayed-out
+
+      - <input type="text" disabled />
+      simply using the distabled attribute will also prevent the end user from 
+      entering text into the input box
+
+      - <input type="text" />
+      the input element doesn't contain the disabled attribute, so text input is allowed
+-->
+
+<!-- Anchor '<a>' Element-->
+<!--
+  - Anchors enclose text and turn them into links
+  - the hred attribute specifies the web address the link points to 
+  - Example: 
+        <a href="https://www.mozilla.org/"">favorite website</a>
+  - Anchors can also have a title attribute, a desciption of the linked page
+  - When attempting to use the same type of quotes inside the same type of quotes you have to use '&quot;'
+        - Example:
+            Wrong way: <a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
+            Correct way:
+                  <a href="https://www.example.com" title="An &quot;interesting&quot; reference">A link to my example.</a>
+-->
+
+<!-- Whitespace in HTML-->
+<!-- 
+  - No matter how much whitespace you use inside HTML element content, the HTML parser
+  reduces each sequence of whitespace to a single space when rendering the code 
+  - 
+-->
+
+<!-- Literal Characters and Character Reference Equivalent-->
+<!-- 
+  1) < equals &lt;
+  2) > equals &gt;
+  3) " equals &quot;
+  4) ' equals &apos;
+  5) & equals &amp;
+-->
